@@ -18,7 +18,7 @@ namespace Busines
 
         public static Boolean validateLogin(string email, string password)
         {
-            return UserData.validateLogin( email, password);
+            return UserData.validateLogin(email, password);
         }
 
         public static User insertUser(User user)
@@ -46,4 +46,5 @@ namespace Busines
         {
             return UserData.SearchByIdCard(idCard);
         }
+    }
 }

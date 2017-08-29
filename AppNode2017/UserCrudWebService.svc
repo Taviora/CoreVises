@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="AppNode2017.UserCrudWebService" CodeBehind="UserCrudWebService.svc.cs" %>

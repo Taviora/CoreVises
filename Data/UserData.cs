@@ -66,9 +66,11 @@ namespace Data
             //se crea el documento ha insertar
             BsonDocument doc = user.ToBsonDocument();
 
-            //se inserta el documento en la coleccion
-            collection.InsertOne(doc);
-
+            //se valida que no se ingresen dos usuarios con el mismo email
+            if (valEmail(user.email, user.identificationCard)==false) {
+                //se inserta el documento en la coleccion
+                collection.InsertOne(doc);
+            }
             //se retorna el usuario
             return user;
         }//insertUser
@@ -117,9 +119,6 @@ namespace Data
 
         }
 
-
-
-
         public static List<User> getUsers()
         {
             //ruta del servidor y puerto
@@ -147,8 +146,6 @@ namespace Data
             return list;
         }//getUsers
 
-
-
         public static BsonDocument SearchByIdCard(String idCard)
         {
             //se establece la cadena de conexion del servidor que vamos a utilizar
@@ -168,6 +165,64 @@ namespace Data
 
             return result;
         }
+
+        public static Boolean valEmail(string email, string identificationCard)
+        {
+            //ruta del servidor y puerto
+            MongoClient mongoClient = new MongoClient("mongodb://gustavosj:gustavosj@ds149373.mlab.com:49373/aplicada2017");
+
+            //Se obtiene el servidor
+            MongoServer mongoServer = mongoClient.GetServer();
+
+            //Se busca y obtenemos la BD que se pasa por parametro
+            MongoDatabase dataBase = mongoServer.GetDatabase("aplicada2017");
+
+            //Se obtiene la coleccion en la que vamos a almacenar el objeto
+            MongoCollection usersCollection = dataBase.GetCollection<User>("users");
+
+            //foreach que traera todos los usuarios e ira comparando para ver si existe
+            //el email ingresado
+            //return true si el email ya existe en la BD
+            //return false si todavia no existe y si se puede registrar
+            foreach (User getUser in usersCollection.FindAllAs<User>())
+            {
+                if (getUser.email.Equals(email) || getUser.identificationCard.Equals(identificationCard))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }//validateLogin
+
+
+        public static List<User> getUserByIdCard(string idCard)
+        {
+            //ruta del servidor y puerto
+            MongoClient mongoClient = new MongoClient("mongodb://gustavosj:gustavosj@ds149373.mlab.com:49373/aplicada2017");
+
+            //Se obtiene el servidor
+            MongoServer mongoServer = mongoClient.GetServer();
+
+            //Se busca y obtenemos la BD que se pasa por parametro
+            MongoDatabase dataBase = mongoServer.GetDatabase("aplicada2017");
+
+            //Se obtiene la coleccion en la que vamos a almacenar el objeto
+            MongoCollection usersCollection = dataBase.GetCollection<User>("users");
+
+            //se crea una lista que almacera todos los usuarios 
+            //para, posteriormente, mostrarlos en interfaz
+            List<User> list = new List<User>();
+
+            //foreach que llenara la lista de users
+            foreach (User getUser in usersCollection.FindAllAs<User>())
+            {
+                if (getUser.identificationCard.Equals(idCard)) {
+                    list.Add(getUser);
+                }
+            }
+
+            return list;
+        }//getUsers
 
     }
 }

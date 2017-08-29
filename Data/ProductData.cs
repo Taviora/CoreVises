@@ -91,10 +91,6 @@ namespace Data
 
         }
 
-
-
-
-
         public static List<Product> getProducts()
         {
             //ruta del servidor y puerto
@@ -174,5 +170,24 @@ namespace Data
             return list;
         }//getProdcutsByCategory
 
+
+        public static BsonDocument SearchByCode(int code)
+        {
+            //se establece la cadena de conexion del servidor que vamos a utilizar
+            MongoClient client = new MongoClient("mongodb://gustavosj:gustavosj@ds149373.mlab.com:49373/aplicada2017");
+
+            //se establece la base de datos donde se realizaran las conexiones
+            IMongoDatabase database = client.GetDatabase("aplicada2017");
+
+            //se declara la coleccion de la BD
+            var collection = database.GetCollection<BsonDocument>("products");
+
+            //hace una comparacion con filtro por id
+            var filter = Builders<BsonDocument>.Filter.Eq("code", code);
+
+            var result = collection.Find(filter).FirstOrDefault();
+
+            return result;
+        }//retorna un objeto BSONdocument con el producto
     }
 }
