@@ -110,10 +110,15 @@
                  <div class="form-group"> 
                      <div class="col-md-2"></div>                 
                     <div class="col-md-6"> 
-                        <asp:Button ID="btIngresar" runat="server" Text="Ingresar" CssClass="btn btn-warning"/>
+                        <asp:Button ID="btIngresar" runat="server" Text="Ingresar" CssClass="btn btn-warning" OnClick="btIngresar_Click"/>
                     </div>
 
                 </div>
+                 <div class="form-group">                    
+                    <div class="col-md-3"> 
+                        <asp:Label ID="Label3" runat="server" CssClass="col-md-2 control-label" Text=""></asp:Label>
+                    </div>            
+                 </div>
             </div>
 
           

@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Busines">
+      <HintPath>..\Busines\bin\Debug\Busines.dll</HintPath>
+    </Reference>
     <Reference Include="Data">
       <HintPath>..\Data\bin\Debug\Data.dll</HintPath>
     </Reference>
@@ -146,6 +149,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Principal.aspx" />
     <Content Include="ProductWebService.svc" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
@@ -182,6 +186,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.aspx.cs">
+      <DependentUpon>Principal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Principal.aspx.designer.cs">
+      <DependentUpon>Principal.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProductWebService.svc.cs">
       <DependentUpon>ProductWebService.svc</DependentUpon>
