@@ -1,0 +1,21 @@
+﻿body {
+    padding-top:37px;
+    background-color:#E8E8E3;
+}
+
+.jumbotron{
+    background-color:#FFB50F;
+    color:white;
+}
+
+.footer-pos{
+    background-color:#1e1b1b;
+    width:auto;
+    height:30px;
+    position:absolute;
+    top:610px;
+    bottom:0;
+    left:0;
+    right:0;
+    color:white;
+}

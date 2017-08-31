@@ -20,7 +20,8 @@
     <link href="Content/bootstrap-theme.min.css.map" rel="stylesheet"/>
     <link href="Content/bootstrap.css" rel="stylesheet"/>
     <link href="Content/bootstrap.css.map" rel="stylesheet"/>
-    <link href="Content/Style.css" rel="stylesheet"/>
+    <link href="Content/CSS.css" rel="stylesheet"/>
+    
    
     <link href="Content/bootstrap.min.css.map" rel="stylesheet"/>
     <script src="scripts/jquery-1.9.1.min.js"></script>   
@@ -28,14 +29,12 @@
     <script src="scripts/jquery-1.9.1.js"></script>
     <script src="scripts/jquery-1.9.1.intellisense.js"></script>
 
-    <!-- Custom styles for this template -->
-    <link href="starter-template.css" rel="stylesheet"/>
-
+   
    
 </head>
 <body  >
-    <form id="form1" runat="server">
-     <div>
+     <section id="form1" runat="server">
+     <div class="container">
          <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
              <div class="container">
                  <div class="navbar-header">
@@ -61,7 +60,7 @@
                          </li>
                           <li class="dropdown">
                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Productos<b class="caret"></b></a>
-                              <ul class="dropdown-menu">
+                              <ul id="1" class="dropdown-menu">
                                   <li class="dropdown-header">Gestiones</li>
                                   <li role="separator" class="divider"></li>
                                   <li><a href="#">Ingresar</a></li>
@@ -85,47 +84,67 @@
              </div>
          </div>     
      </div>
-        
+        <br />
+      <br />  
         <!--Login Form --->
+      
+      <div class="container">          
+          <div class="jumbotron">
+              <h2>Sistema gerencial de CoreVises </h2>
+          </div>          
+      </div>
         <div class="container">
-             <img src="img/corevises.jpg" style="float:right" class="img-rounded" alt="Cinque Terre" width="250" height="236"/>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Ingresar al sistema de CoreVises
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <form role="form" runat="server">
+                                <div class="form-group">
+                                    <label>Email</label>
+                                 <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server"></asp:TextBox>
 
-            <div class="form-horizontal" >
-                <h2>Ingreso a procesos gerenciales</h2>
-                <hr />               
-               
-                <div class="form-group">
-                    <asp:Label ID="Label1" runat="server" CssClass="col-md-2 control-label" Text="Correo:"></asp:Label>
-                    <div class="col-md-3"> 
-                        <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server"></asp:TextBox>
-                    </div>
-                </div>
-                 <div class="form-group">
-                    <asp:Label ID="Label2" runat="server" CssClass="col-md-2 control-label" Text="Contraseña:"></asp:Label>
-                    <div class="col-md-3"> 
-                        <asp:TextBox ID="TextBox2" CssClass="form-control" runat="server"></asp:TextBox>
-                    </div>            
-                 </div>
-                
-                 <div class="form-group"> 
-                     <div class="col-md-2"></div>                 
-                    <div class="col-md-6"> 
-                        <asp:Button ID="btIngresar" runat="server" Text="Ingresar" CssClass="btn btn-warning" OnClick="btIngresar_Click"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>Contraseña</label>
+                                     <asp:TextBox ID="TextBox2" CssClass="form-control" type="password" runat="server"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                       <asp:Button ID="btIngresar" runat="server" Text="Ingresar" CssClass="btn btn-warning" OnClick="btIngresar_Click"/>
+                                 
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                    <asp:Label ID="Label3" runat="server" CssClass="col-md-6 control-label" Text=""></asp:Label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
                     </div>
 
                 </div>
-                 <div class="form-group">                    
-                    <div class="col-md-3"> 
-                        <asp:Label ID="Label3" runat="server" CssClass="col-md-2 control-label" Text=""></asp:Label>
-                    </div>            
-                 </div>
+                <div class="col-md-6">
+                   
+                    <div class ="panel-body">
+                        <img src="img/corevises.png"  class="img-rounded" alt="Cinque Terre" width="300" height="236"/>
+                    </div>
+
+                   
+                </div>
+
             </div>
 
-          
         </div>
-
-        <!--Login form --->
-          <!----FOOOTER---->
+             
+        </section>
+        
+        
+        <!----FOOOTER---->
          <footer class="footer-pos">
             <div class="container">
                 <p class="pull-right">&copy;2017 CoreVises &middot; </p>
@@ -135,9 +154,6 @@
         
 
          <!----FOOOTER---->
-    </form>
-      
-  
    
 </body>
 </html>
