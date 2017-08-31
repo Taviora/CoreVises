@@ -8,6 +8,16 @@
     color:white;
 }
 
+.panel-heading{
+    background-color:black;
+}
+
+.panel-title{
+    background-color:black;
+    color:white;
+   
+}
+
 .footer-pos{
     background-color:#1e1b1b;
     width:auto;
