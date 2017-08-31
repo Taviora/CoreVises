@@ -130,9 +130,9 @@
                 </div>
                 <div class="col-md-6">
                    
-                    <div class ="panel-body">
-                        <img src="img/corevises.png"  class="img-rounded" alt="Cinque Terre" width="300" height="236"/>
-                    </div>
+                   
+                        <img src="img/corevises.png"  style="float:right" class="img-thumbnail"  alt="Cinque Terre" width="300" height="236"/>
+                    
 
                    
                 </div>
