@@ -12,7 +12,7 @@ using Data;
 
 namespace Busines
 {
-   public  class ProductBusiness
+    public class ProductBusiness
     {
         //constructor vacio
         public ProductBusiness() { }
@@ -41,6 +41,9 @@ namespace Busines
         {
             return ProductData.getProductsByCategory(category);
         }
-
+        public static BsonDocument SearchByID(ObjectId id)
+        {
+            return ProductData.SearchById(id);
+        }
     }
 }

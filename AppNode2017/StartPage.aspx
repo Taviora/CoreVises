@@ -95,17 +95,17 @@
               <div class="col-lg-4">
                   <img class="img-circle" src="img/main-thumb-t-3982-200-crxgwhusirjwxuneqllnviphfklgfdti.jpeg" alt="thumb01" width="200" height="200"/>
                   <h2>Programacion en C#</h2>
-                  <p>Nuestro core esta programado en el lenguajes de programacion C#</p>
+                  <p>Nuestro core esta programado en el lenguaje de programacion C#</p>
               </div>
               <div  class="col-lg-4" >
                   <img class="img-circle" src="img/MongoDB.jpg" alt="thumb01" width="200" height="200"/>
-                  <h2>NoSql</h2>
-                  <p>Trabajamos con bases de datos NoSQL especificacmente utilizando mongoDB</p>
+                  <h2>NoSQL</h2>
+                  <p>Trabajamos con bases de datos NoSQL especificacmente utilizando el gestor de bases de datos mongoDB</p>
               </div>
               <div class="col-lg-4">
                   <img class="img-circle" src="img/servicios-web-img.png" alt="thumb01" width="200" height="200"/>
                   <h2>WebServices</h2>
-                  <p>Proveemos servicios web gratuitos</p>
+                  <p>Proveemos servicios web gratuitos SOAP Y REST</p>
               </div>
 
           </div>

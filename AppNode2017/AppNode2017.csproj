@@ -172,6 +172,7 @@
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="StartPage.aspx" />
+    <Content Include="UpdateProduct.aspx" />
     <Content Include="UserCrudWebService.svc" />
     <Content Include="UserList.aspx" />
     <Content Include="Web.config" />
@@ -224,6 +225,13 @@
     </Compile>
     <Compile Include="StartPage.aspx.designer.cs">
       <DependentUpon>StartPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProduct.aspx.cs">
+      <DependentUpon>UpdateProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateProduct.aspx.designer.cs">
+      <DependentUpon>UpdateProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserCrudWebService.svc.cs">
       <DependentUpon>UserCrudWebService.svc</DependentUpon>
