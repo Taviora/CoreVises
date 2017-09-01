@@ -10,7 +10,7 @@
 namespace AppNode2017 {
     
     
-    public partial class InsertUser {
+    public partial class DeleteProduct {
         
         /// <summary>
         /// Section1 control.

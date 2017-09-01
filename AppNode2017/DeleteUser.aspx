@@ -10,7 +10,7 @@
     <meta name="author" content=""/>
     <link rel="icon" href="../../../../favicon.ico"/>
 
-    <title>Starter Template for Bootstrap</title>
+    <title>Eliminar Usuario</title>
 
     <!-- Bootstrap core CSS -->
     
@@ -20,7 +20,7 @@
     <link href="Content/bootstrap-theme.min.css.map" rel="stylesheet"/>
     <link href="Content/bootstrap.css" rel="stylesheet"/>
     <link href="Content/bootstrap.css.map" rel="stylesheet"/>
-    <link href="Content/Style.css" rel="stylesheet"/>
+    <link href="Content/CSS.css" rel="stylesheet"/>
    
     <link href="Content/bootstrap.min.css.map" rel="stylesheet"/>
     <script src="scripts/jquery-1.9.1.min.js"></script>   
@@ -33,9 +33,9 @@
 
    
 </head>
-<body>
-    <form id="form1" runat="server">
-     <div>
+<body> 
+<section id="Section1" runat="server">
+     <div class="container">
          <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
              <div class="container">
                  <div class="navbar-header">
@@ -55,13 +55,13 @@
                               <ul class="dropdown-menu">
                                   <li class="dropdown-header">Gestiones</li>
                                   <li role="separator" class="divider"></li>
-                                  <li><a href="#">Eliminar</a></li>
-                                  <li><a href="#">Actualizar</a></li>
+                                  <li><a href="DeleteUser.aspx">Eliminar</a></li>
+                                  <li><a href="ViewUsers.aspx">Listar</a></li>
                               </ul>
                          </li>
                           <li class="dropdown">
                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Productos<b class="caret"></b></a>
-                              <ul class="dropdown-menu">
+                              <ul id="1" class="dropdown-menu">
                                   <li class="dropdown-header">Gestiones</li>
                                   <li role="separator" class="divider"></li>
                                   <li><a href="#">Ingresar</a></li>
@@ -85,35 +85,79 @@
              </div>
          </div>     
      </div>
+      <br />
+      <br />
+        <div class="container center">          
+          <div class="jumbotron center">
+              <h2>Eliminar usuario </h2>
+          </div>          
+      </div>
+     
+        <!--Parte eliminar usuario--->
+      <br />
+      
+         <div class="container center">
+          <div class="row">
 
- <div>
-            <center><h2>Gerencia CoreVises</h2></center>
 
-            <hr />
-            </div>
-        <!----Insert form---->
-        <div class="center-page"> 
-           
-            <h4>    Eliminar usuario</h4>
-            <label class="col-xs-11">Cedula</label>
-            <div class="col-xs-11">
-            <asp:TextBox ID="tbidcard" runat="server" class="form-control" placeholder="Username" Width="150"></asp:TextBox>
-            </div>
-            <div class="col-xs-11 space-vert" > 
-            <asp:Button ID="btEliminar" runat="server" Text="Eliminar" CssClass="btn btn-warning"/>
-            </div>
-        </div>
-         
-        <!----Insert form---->
+              <div class="container center">
+                  <form role="form" runat="server">
+                      <div class="col-lg-4">
+                          <div class="panel-heading">
+                              <h3 class="panel-title">Ingresar cédula de usuario
+                              </h3>
+                            
+                          </div>
+                            <br />
+                          <div class="form-group">
+                              <label>Cedula</label>
+                              <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server"></asp:TextBox>
+                          </div>
+                          <div class="form-group">
+                              <asp:Button ID="btborrar" runat="server" Text="Borrar" CssClass="btn btn-warning" OnClick="btborrar_Click" />
+                              <br />
+                              <br />
+                              <br />
+                              <asp:Button ID="Button2" runat="server" Text="Ver listado clientes" CssClass="btn btn-warning" OnClick="Button1_Click" />
 
-         <!----foote---->
-        <footer>
-            <div class="container">
-                <p class="pull-right">&copy;2017 CoreVises &middot; </p>
+                          </div>
+                      </div>
 
-            </div>
-        </footer>
-         <!----footer---->
-    </form>
+                      <div class="col-lg-8" style="clear:right; height:300px;" >
+                          <div style="width:700px;height:290px;overflow:auto">
+                          <asp:GridView ID="GridView2" runat="server" Width="700px"
+                              AutoGenerateColumns="false" PageSize="5" AllowPaging="false" CssClass="table table-bordered bs-table">
+                              <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                              <EditRowStyle BackColor="#ffffcc" />
+                              <EmptyDataRowStyle ForeColor="Red" CssClass="table table-bordered" />
+
+                              <Columns>
+                                  <asp:BoundField DataField="_id" HeaderText="ID" HtmlEncode="true" />                                 
+                                  <asp:BoundField DataField="identificationCard" HeaderText="Cedula" HtmlEncode="true" />
+                                  <asp:BoundField DataField="fullName" HeaderText="Nombre" HtmlEncode="true" />
+
+                              </Columns>
+                          </asp:GridView>
+                           </div>
+                      </div>
+                  </form>
+              </div>
+              <div>
+              </div>
+
+
+          </div>
+
+         </div>
+
+    <!--Parte eliminar usuario--->
+
+    <br />
+    <br />
+    
+
+    <footer>&copy; CoreVises 2017  .</footer>
+    </section>
+
 </body>
 </html>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="AppNode2017.Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ProductList.aspx.cs" Inherits="AppNode2017.ProductList" %>
 
 <!DOCTYPE html>
 
@@ -10,7 +10,7 @@
     <meta name="author" content=""/>
     <link rel="icon" href="../../../../favicon.ico"/>
 
-    <title> Login</title>
+    <title>Listado de Productos</title>
 
     <!-- Bootstrap core CSS -->
     
@@ -21,19 +21,20 @@
     <link href="Content/bootstrap.css" rel="stylesheet"/>
     <link href="Content/bootstrap.css.map" rel="stylesheet"/>
     <link href="Content/CSS.css" rel="stylesheet"/>
-    
    
     <link href="Content/bootstrap.min.css.map" rel="stylesheet"/>
     <script src="scripts/jquery-1.9.1.min.js"></script>   
     <script src="scripts/bootstrap.js"></script>
     <script src="scripts/jquery-1.9.1.js"></script>
     <script src="scripts/jquery-1.9.1.intellisense.js"></script>
-  
-   
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet"/>
+
    
 </head>
-<body  >
-     <section id="form1" runat="server">
+<body> 
+<section id="Section1" runat="server">
      <div class="container">
          <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
              <div class="container">
@@ -78,82 +79,53 @@
                                   <li><a href="#">Clientes</a></li>
                               </ul>
                          </li> 
-                          <li class="active"><a href="Usuarios">Salir</a></li>                     
+                          <li class="active"><a href="Login.aspx">Salir</a></li>                     
                      </ul>
                  </div>
              </div>
          </div>     
      </div>
-     
-        <!--Login Form --->
       <br />
-      <br />  
-      <div class="container">          
-          <div class="jumbotron">
-              <h2>Sistema gerencial de CoreVises </h2>
+      <br />
+        <div class="container center">          
+          <div class="jumbotron center">
+              <h2>Listado de productos en el sistema </h2>
           </div>          
       </div>
-          <br /> 
-         
-        <div class="container center">
-            <div class="row">
-                <div class="col-md-6">
-                    
-                        <div class="panel-heading">
-                            <h3 class="panel-title">
-                                Ingresar al sistema de CoreVises
-                            </h3>
-                        </div>
-                        <div class="panel-body">
-                            <form role="form" runat="server">
-                                <div class="form-group">
-                                    <label>Email</label>
-                                 <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server"></asp:TextBox>
-                                   
-                                </div>
-                                <div class="form-group">
-                                    <label>Contraseña</label>
-                                     <asp:TextBox ID="TextBox2" CssClass="form-control" type="password" runat="server"></asp:TextBox>
-                                 
-                                </div>
-                                <div class="form-group">
-                                       <asp:Button ID="btIngresar" runat="server" Text="Ingresar" CssClass="btn btn-warning" OnClick="btIngresar_Click"/>
-                                 
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-md-6">
-                                    <asp:Label ID="Label3" runat="server" CssClass="col-md-6 control-label text-danger" Text=""></asp:Label>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+     
+        <!--Parte listado productos--->
+      <br />
+      
+         <div class="container center">
+          <form role="form " runat="server" class="center" >
+                          <asp:GridView ID="GridView2" runat="server" Width="700px"
+                              AutoGenerateColumns="false" PageSize="5" AllowPaging="false" CssClass="table table-bordered bs-table">
+                              <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                              <EditRowStyle BackColor="#ffffcc" />
+                              <EmptyDataRowStyle ForeColor="Red" CssClass="table table-bordered" />
 
-                   
+                              <Columns>
+                                  <asp:BoundField DataField="_id" HeaderText="ID" HtmlEncode="true" />                                 
+                                  <asp:BoundField DataField="name" HeaderText="Nombre" HtmlEncode="true" />
+                                  <asp:BoundField DataField="description" HeaderText="Descripcion" HtmlEncode="true" />
+                                  <asp:BoundField DataField="code" HeaderText="Codigo" HtmlEncode="true" />
+                                  <asp:BoundField DataField="inStock" HeaderText="Cantidad en Bodega" HtmlEncode="true" />
+                                  <asp:BoundField DataField="weight" HeaderText="Peso" HtmlEncode="true" />
 
-                </div>
-                <div class="col-md-6">
-                    <div class="">
-                   <img src="img/tree.png" style="float:inherit" class="img-thumbnail" alt="Cinque Terre" width="300" height="350" />
-                    </div>
+                              </Columns>
+                          </asp:GridView>
+              </form>
+                           </div>
                
-                </div>
-
-            </div>
-
-        </div>
 
 
 
-         <footer>&copy; CoreVises 2017  .</footer>
+    <br />
+    <br />
+    
 
-
-
-
-     </section>
-
-
-
-
+    <footer>&copy; CoreVises 2017  .</footer>
+    </section>
 
 </body>
 </html>

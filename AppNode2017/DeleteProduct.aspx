@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="AppNode2017.Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DeleteProduct.aspx.cs" Inherits="AppNode2017.DeleteProduct" %>
 
 <!DOCTYPE html>
 
@@ -10,7 +10,7 @@
     <meta name="author" content=""/>
     <link rel="icon" href="../../../../favicon.ico"/>
 
-    <title> Login</title>
+    <title>Eliminar Producto</title>
 
     <!-- Bootstrap core CSS -->
     
@@ -21,19 +21,20 @@
     <link href="Content/bootstrap.css" rel="stylesheet"/>
     <link href="Content/bootstrap.css.map" rel="stylesheet"/>
     <link href="Content/CSS.css" rel="stylesheet"/>
-    
    
     <link href="Content/bootstrap.min.css.map" rel="stylesheet"/>
     <script src="scripts/jquery-1.9.1.min.js"></script>   
     <script src="scripts/bootstrap.js"></script>
     <script src="scripts/jquery-1.9.1.js"></script>
     <script src="scripts/jquery-1.9.1.intellisense.js"></script>
-  
-   
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet"/>
+
    
 </head>
-<body  >
-     <section id="form1" runat="server">
+<body> 
+<section id="Section1" runat="server">
      <div class="container">
          <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
              <div class="container">
@@ -78,82 +79,85 @@
                                   <li><a href="#">Clientes</a></li>
                               </ul>
                          </li> 
-                          <li class="active"><a href="Usuarios">Salir</a></li>                     
+                          <li class="active"><a href="Login.aspx">Salir</a></li>                     
                      </ul>
                  </div>
              </div>
          </div>     
      </div>
-     
-        <!--Login Form --->
       <br />
-      <br />  
-      <div class="container">          
-          <div class="jumbotron">
-              <h2>Sistema gerencial de CoreVises </h2>
+      <br />
+        <div class="container center">          
+          <div class="jumbotron center">
+              <h2>Eliminar producto de la base de datos </h2>
           </div>          
       </div>
-          <br /> 
-         
-        <div class="container center">
-            <div class="row">
-                <div class="col-md-6">
-                    
-                        <div class="panel-heading">
-                            <h3 class="panel-title">
-                                Ingresar al sistema de CoreVises
-                            </h3>
-                        </div>
-                        <div class="panel-body">
-                            <form role="form" runat="server">
-                                <div class="form-group">
-                                    <label>Email</label>
-                                 <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server"></asp:TextBox>
-                                   
-                                </div>
-                                <div class="form-group">
-                                    <label>Contraseña</label>
-                                     <asp:TextBox ID="TextBox2" CssClass="form-control" type="password" runat="server"></asp:TextBox>
-                                 
-                                </div>
-                                <div class="form-group">
-                                       <asp:Button ID="btIngresar" runat="server" Text="Ingresar" CssClass="btn btn-warning" OnClick="btIngresar_Click"/>
-                                 
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-md-6">
-                                    <asp:Label ID="Label3" runat="server" CssClass="col-md-6 control-label text-danger" Text=""></asp:Label>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-
-                   
-
-                </div>
-                <div class="col-md-6">
-                    <div class="">
-                   <img src="img/tree.png" style="float:inherit" class="img-thumbnail" alt="Cinque Terre" width="300" height="350" />
-                    </div>
-               
-                </div>
-
-            </div>
-
-        </div>
+     
+        <!--Parte eliminar usuario--->
+      <br />
+      
+         <div class="container center">
+          <div class="row">
 
 
+              <div class="container center">
+                  <form role="form" runat="server">
+                      <div class="col-lg-4">
+                          <div class="panel-heading">
+                              <h3 class="panel-title">Ingresar ID de producto
+                              </h3>
+                            
+                          </div>
+                            <br />
+                          <div class="form-group">
+                              <label>ID</label>
+                              <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server"></asp:TextBox>
+                          </div>
+                          <div class="form-group">
+                              <asp:Button ID="btborrar" runat="server" Text="Borrar" CssClass="btn btn-warning" OnClick="btborrar_Click" />
+                              <br />
+                              <br />
+                              <br />
+                              <asp:Button ID="Button2" runat="server" Text="Ver listado productos" CssClass="btn btn-warning" OnClick="Button1_Click" />
 
-         <footer>&copy; CoreVises 2017  .</footer>
+                          </div>
+                      </div>
+
+                      <div class="col-lg-8" style="clear:right; height:300px;" >
+                          <div style="width:700px;height:290px;overflow:auto">
+                          <asp:GridView ID="GridView2" runat="server" Width="700px"
+                              AutoGenerateColumns="false" PageSize="5" AllowPaging="false" CssClass="table table-bordered bs-table">
+                              <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                              <EditRowStyle BackColor="#ffffcc" />
+                              <EmptyDataRowStyle ForeColor="Red" CssClass="table table-bordered" />
+
+                              <Columns>
+                                  <asp:BoundField DataField="_id" HeaderText="ID" HtmlEncode="true" />                                 
+                                  <asp:BoundField DataField="name" HeaderText="Nombre" HtmlEncode="true" />
+                                  <asp:BoundField DataField="description" HeaderText="Descripcion" HtmlEncode="true" />
+
+                              </Columns>
+                          </asp:GridView>
+                           </div>
+                      </div>
+                  </form>
+              </div>
+              <div>
+              </div>
 
 
+          </div>
 
+         </div>
 
-     </section>
+    <!--Parte eliminar usuario--->
 
+    <br />
+    <br />
+    
 
-
-
+    <footer>&copy; CoreVises 2017  .</footer>
+    </section>
 
 </body>
 </html>

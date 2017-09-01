@@ -1,6 +1,7 @@
 ﻿body {
     padding-top:37px;
     background-color:#E8E8E3;
+  
 }
 
 .jumbotron{
@@ -17,15 +18,19 @@
     color:white;
    
 }
-
-.footer-pos{
-    background-color:#1e1b1b;
-    width:auto;
-    height:30px;
-    position:absolute;
-    top:610px;
-    bottom:0;
-    left:0;
-    right:0;
+footer{
+    height:40px;
+    background-color:black;
+    margin-top:35px;
     color:white;
+    text-align:right;
+    padding-top:10px;
+}
+
+.center{
+    text-align:center;
+}
+
+.right{
+    float:right;
 }

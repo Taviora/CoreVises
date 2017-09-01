@@ -28,7 +28,7 @@ namespace AppNode2017
             //se instancia el Business para poder utilizar sus metodos
             if (UserBusiness.validateLogin(email, pass) == true)
             {
-                Response.Redirect("Principal.aspx");
+                Response.Redirect("StartPage.aspx");
                 Label3.Text = "";
             }
             else {
