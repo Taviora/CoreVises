@@ -43,7 +43,7 @@
                      </button>
                      <a class="navbar-brand" ><span><img alt="Logo" src="img/corevises.png" height="30"/>  </span>CoreVises</a>
                  </div>
-                 <div class="navbar-collapse collapse">
+                  <div class="navbar-collapse collapse">
                      <ul class="nav navbar-nav navbar-right">
                          <li ><a href="Usuarios">Home</a></li>
                          <li class="dropdown">
@@ -60,10 +60,10 @@
                               <ul id="1" class="dropdown-menu">
                                   <li class="dropdown-header">Gestiones</li>
                                   <li role="separator" class="divider"></li>
-                                  <li><a href="#">Ingresar</a></li>
-                                  <li><a href="#">Eliminar</a></li>
-                                  <li><a href="#">Actualizar</a></li>
-                                  <li><a href="#">Listar</a></li>
+                                  <li><a href="InsertProduct.aspx">Ingresar</a></li>
+                                  <li><a href="DeletePproduct.aspx">Eliminar</a></li>
+                                  <li><a href="UpdateProduct.aspx">Actualizar</a></li>
+                                  <li><a href="ProductList.aspx">Listar</a></li>
                               </ul>
                          </li>
                           <li class="dropdown">
@@ -75,7 +75,7 @@
                                   <li><a href="#">Clientes</a></li>
                               </ul>
                          </li> 
-                          <li class="active"><a href="Usuarios">Salir</a></li>                     
+                          <li class="active"><a href="Login.aspx">Salir</a></li>                     
                      </ul>
                  </div>
              </div>

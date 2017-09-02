@@ -64,10 +64,10 @@
                               <ul id="1" class="dropdown-menu">
                                   <li class="dropdown-header">Gestiones</li>
                                   <li role="separator" class="divider"></li>
-                                  <li><a href="#">Ingresar</a></li>
-                                  <li><a href="#">Eliminar</a></li>
-                                  <li><a href="#">Actualizar</a></li>
-                                  <li><a href="#">Listar</a></li>
+                                  <li><a href="InsertProduct.aspx">Ingresar</a></li>
+                                  <li><a href="DeletePproduct.aspx">Eliminar</a></li>
+                                  <li><a href="UpdateProduct.aspx">Actualizar</a></li>
+                                  <li><a href="ProductList.aspx">Listar</a></li>
                               </ul>
                          </li>
                           <li class="dropdown">
