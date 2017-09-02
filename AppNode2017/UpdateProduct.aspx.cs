@@ -22,6 +22,13 @@ namespace AppNode2017
             //se llenara el Gridview con los datos
             GridView2.DataSource = ProductBusiness.getProducts().ToList();
             GridView2.DataBind();
+
+            DropDownList1.Items.Add("Tecnologia");
+            DropDownList1.Items.Add("Linea Blanca");
+            DropDownList1.Items.Add("Ropa");
+            DropDownList1.Items.Add("Libros");
+            DropDownList1.Items.Add("Accesorios");
+            DropDownList1.Items.Add("Muebles");
         }
 
         protected void udpate_Click(object sender, EventArgs e)
@@ -37,6 +44,14 @@ namespace AppNode2017
             product.urlImage = TextBox7.Text;
 
             ProductBusiness.Edit(product, TextBox1.Text);
+
+            this.TextBox1.Text = "";
+            this.TextBox2.Text = "";
+            this.TextBox3.Text = "";
+            this.TextBox4.Text = "";
+            this.TextBox5.Text = "";
+            this.TextBox6.Text = "";
+            this.TextBox7.Text = "";
 
             //cuando se presione sobre el boton
             //se llenara el Gridview con los datos

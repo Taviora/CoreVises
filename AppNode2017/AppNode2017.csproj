@@ -126,6 +126,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AboutUs.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -134,11 +135,14 @@
     <Content Include="DeleteProduct.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="img\corevises.png" />
+    <Content Include="img\e-comer.png" />
     <Content Include="img\main-thumb-t-3982-200-crxgwhusirjwxuneqllnviphfklgfdti.jpeg" />
     <Content Include="img\MongoDB.jpg" />
     <Content Include="img\servicios-web-img.png" />
     <Content Include="img\tree.png" />
     <Content Include="DeleteUser.aspx" />
+    <Content Include="img\ucr.png" />
+    <Content Include="InsertProduct.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -178,6 +182,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DeleteProduct.aspx.cs">
       <DependentUpon>DeleteProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -191,6 +202,13 @@
     </Compile>
     <Compile Include="DeleteUser.aspx.designer.cs">
       <DependentUpon>DeleteUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InsertProduct.aspx.cs">
+      <DependentUpon>InsertProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsertProduct.aspx.designer.cs">
+      <DependentUpon>InsertProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="IProductWebService.cs" />
     <Compile Include="IUserCrudWebService.cs" />

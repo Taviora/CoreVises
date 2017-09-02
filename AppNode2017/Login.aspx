@@ -48,37 +48,8 @@
                  </div>
                  <div class="navbar-collapse collapse">
                      <ul class="nav navbar-nav navbar-right">
-                         <li ><a href="Usuarios">Home</a></li>
-                         <li class="dropdown">
-                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuarios<b class="caret"></b></a>
-                              <ul class="dropdown-menu">
-                                  <li class="dropdown-header">Gestiones</li>
-                                  <li role="separator" class="divider"></li>
-                                  <li><a href="DeleteUser.aspx">Eliminar</a></li>
-                                  <li><a href="ViewUsers.aspx">Listar</a></li>
-                              </ul>
-                         </li>
-                          <li class="dropdown">
-                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Productos<b class="caret"></b></a>
-                              <ul id="1" class="dropdown-menu">
-                                  <li class="dropdown-header">Gestiones</li>
-                                  <li role="separator" class="divider"></li>
-                                  <li><a href="#">Ingresar</a></li>
-                                  <li><a href="#">Eliminar</a></li>
-                                  <li><a href="#">Actualizar</a></li>
-                                  <li><a href="#">Listar</a></li>
-                              </ul>
-                         </li>
-                          <li class="dropdown">
-                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reportes<b class="caret"></b></a>
-                              <ul class="dropdown-menu">
-                                  <li class="dropdown-header">Generar por:</li>
-                                  <li role="separator" class="divider"></li>
-                                  <li><a href="#">Producto</a></li>
-                                  <li><a href="#">Clientes</a></li>
-                              </ul>
-                         </li> 
-                          <li class="active"><a href="Usuarios">Salir</a></li>                     
+                        
+                          <li class="active"><a href="AboutUs.aspx">Acerca de nosotros</a></li>                     
                      </ul>
                  </div>
              </div>
@@ -122,7 +93,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-6">
-                                    <asp:Label ID="Label3" runat="server" CssClass="col-md-6 control-label text-danger" Text=""></asp:Label>
+                                    <b><asp:Label ID="Label3" runat="server" CssClass="col-md-6 control-label text-danger" Text=""></asp:Label></b>
                                     </div>
                                 </div>
                             </form>

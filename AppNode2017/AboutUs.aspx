@@ -1,16 +1,15 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserList.aspx.cs" Inherits="AppNode2017.UserList" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AboutUs.aspx.cs" Inherits="AppNode2017.AboutUs" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <meta charset="utf-8"/>
+<head runat="server">  <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="description" content=""/>
     <meta name="author" content=""/>
     <link rel="icon" href="../../../../favicon.ico"/>
 
-    <title>Listado de Usuarios</title>
+    <title>Sobre CoreVises</title>
 
     <!-- Bootstrap core CSS -->
     
@@ -21,20 +20,17 @@
     <link href="Content/bootstrap.css" rel="stylesheet"/>
     <link href="Content/bootstrap.css.map" rel="stylesheet"/>
     <link href="Content/CSS.css" rel="stylesheet"/>
+    
    
     <link href="Content/bootstrap.min.css.map" rel="stylesheet"/>
     <script src="scripts/jquery-1.9.1.min.js"></script>   
     <script src="scripts/bootstrap.js"></script>
     <script src="scripts/jquery-1.9.1.js"></script>
     <script src="scripts/jquery-1.9.1.intellisense.js"></script>
-
-    <!-- Custom styles for this template -->
-    <link href="starter-template.css" rel="stylesheet"/>
-
-   
+  
 </head>
-<body> 
-<section id="Section1" runat="server">
+<body>
+   <section id="form1" runat="server">
      <div class="container">
          <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
              <div class="container">
@@ -79,58 +75,52 @@
                                   <li><a href="#">Clientes</a></li>
                               </ul>
                          </li> 
-                          <li class="active"><a href="Login.aspx">Salir</a></li>                     
+                          <li class="active"><a href="Usuarios">Salir</a></li>                     
                      </ul>
                  </div>
              </div>
          </div>     
      </div>
-      <br />
-      <br />
-        <div class="container center">          
-          <div class="jumbotron center">
-              <h2>Listado de usuarios en el sistema </h2>
+        <br />
+      <br />  
+         <div class="container">          
+          <div class="jumbotron">
+              <h2>Sobre CoreVises </h2>
           </div>          
       </div>
-     
-        <!--Parte listado productos--->
-      <br />
 
-    <div class="container center" style="align-content:center">
-        <div class="row">
+       <!---CONTENIDO MEDIO--->
+      <div class="container center">
+          <div class="row">
+              <div class="col-lg-6">
+                  
+                  <b><p>CoreVises nace como la propuesta de proyecto #1 del curso Informatica Aplicada a los negocios de la carrera Informatica Empresarial.</p></b>
+                  <b><p>Universidad de Costa Rica</p></b>
+                  <b><p>Recinto de Paraiso</p></b>
+                  <b><p>Elaborado por:</p></b>
+                  <b><p>  Aaron Araya</p></b>
+                 <b><p>Jose Coto</p></b>
+                  <b><p>Andres Coto</p></b>
+                  <b><p>Koralia Rodriguez</p></b>
+                  <b><p>Gustavo Solano</p></b>
+                  <b><p>Allan Vazquez</p></b>
+              </div>
+              <div  class="col-lg-6" >
+                  <img class="img-thumbnail" src="img/ucr.png" alt="thumb01" width="300" height="300"/>
+                  
+              </div>
+             
 
-            <form role="form " runat="server" align="center">
-                <asp:GridView ID="GridView2" runat="server" Width="1000px" aling="center"
-                    AutoGenerateColumns="false" PageSize="5" AllowPaging="false" CssClass="table table-bordered bs-table">
-                    <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
-                    <EditRowStyle BackColor="#ffffcc" />
-                    <EmptyDataRowStyle ForeColor="Red" CssClass="table table-bordered" />
-
-                    <Columns>
-                        <asp:BoundField DataField="_id" HeaderText="ID" HtmlEncode="true" />
-                        <asp:BoundField DataField="fullname" HeaderText="Nombre" HtmlEncode="true" />
-                        <asp:BoundField DataField="identificationCard" HeaderText="Cedula" HtmlEncode="true" />
-                        <asp:BoundField DataField="phone" HeaderText="Telefono" HtmlEncode="true" />
-                        <asp:BoundField DataField="address" HeaderText="Direccion" HtmlEncode="true" />
-                        <asp:BoundField DataField="email" HeaderText="Correo electronico" HtmlEncode="true" />
-
-                    </Columns>
-                </asp:GridView>
-            </form>
-        </div>
-
-    </div>
-         
+          </div>
+      </div>
+        <!---CONTENIDO MEDIO--->
 
 
+         <footer>&copy; CoreVises 2017  .</footer>
 
 
-    <br />
-    <br />
-    
 
-    <footer>&copy; CoreVises 2017  .</footer>
-    </section>
 
+     </section>
 </body>
 </html>

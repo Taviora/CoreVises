@@ -127,7 +127,7 @@
                            <div class="form-group">
                               <label>Codigo</label>
                               <asp:TextBox ID="TextBox4" CssClass="form-control" runat="server"></asp:TextBox>
-                          </div>
+                          </div>                          
                            <div class="form-group">
                               <label>Cantidad</label>
                               <asp:TextBox ID="TextBox5" CssClass="form-control" runat="server"></asp:TextBox>
