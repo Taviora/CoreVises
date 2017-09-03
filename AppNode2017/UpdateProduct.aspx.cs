@@ -18,6 +18,15 @@ namespace AppNode2017
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                DropDownList1.Items.Add("Tecnologia");
+                DropDownList1.Items.Add("Linea Blanca");
+                DropDownList1.Items.Add("Ropa");
+                DropDownList1.Items.Add("Libros");
+                DropDownList1.Items.Add("Accesorios");
+                DropDownList1.Items.Add("Muebles");
+            }
             //cuando se presione sobre el boton
             //se llenara el Gridview con los datos
             GridView2.DataSource = ProductBusiness.getProducts().ToList();
@@ -36,6 +45,7 @@ namespace AppNode2017
             product.inStock = Int32.Parse(TextBox5.Text);
             product.weight = TextBox6.Text;
             product.urlImage = TextBox7.Text;
+            product.category = DropDownList1.Text;
             product.price = float.Parse(TextBox8.Text);
 
             ProductBusiness.Edit(product, TextBox1.Text);
@@ -60,6 +70,8 @@ namespace AppNode2017
         {
             if(ProductBusiness.SearchByID(ObjectId.Parse(TextBox1.Text))!= null)
             {
+
+                //mandamos los datos que ya estan ingresado al formulario para poder editarlos
                 TextBox2.Text = ProductBusiness.SearchByID(ObjectId.Parse(TextBox1.Text))["name"] != null ?
                     ProductBusiness.SearchByID(ObjectId.Parse(TextBox1.Text))["name"].ToString() : string.Empty;
                 TextBox3.Text = ProductBusiness.SearchByID(ObjectId.Parse(TextBox1.Text))["description"] != null ?
@@ -74,6 +86,9 @@ namespace AppNode2017
                     ProductBusiness.SearchByID(ObjectId.Parse(TextBox1.Text))["urlImage"].ToString() : string.Empty;
                 TextBox8.Text = ProductBusiness.SearchByID(ObjectId.Parse(TextBox1.Text))["price"] != null ?
                    ProductBusiness.SearchByID(ObjectId.Parse(TextBox1.Text))["price"].ToString() : string.Empty;
+                DropDownList1.Text = ProductBusiness.SearchByID(ObjectId.Parse(TextBox1.Text))["category"] != null ?
+                  ProductBusiness.SearchByID(ObjectId.Parse(TextBox1.Text))["category"].ToString() : string.Empty;
+
 
             }
         }
