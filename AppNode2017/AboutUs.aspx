@@ -52,7 +52,7 @@
                                   <li class="dropdown-header">Gestiones</li>
                                   <li role="separator" class="divider"></li>
                                   <li><a href="DeleteUser.aspx">Eliminar</a></li>
-                                  <li><a href="ViewUsers.aspx">Listar</a></li>
+                                  <li><a href="UserList.aspx">Listar</a></li>
                               </ul>
                          </li>
                           <li class="dropdown">
@@ -94,19 +94,19 @@
           <div class="row">
               <div class="col-lg-6">
                   
-                  <b><p>CoreVises nace como la propuesta de proyecto #1 del curso Informatica Aplicada a los negocios de la carrera Informatica Empresarial.</p></b>
-                  <b><p>Universidad de Costa Rica</p></b>
-                  <b><p>Recinto de Paraiso</p></b>
-                  <b><p>Elaborado por:</p></b>
-                  <b><p>  Aaron Araya</p></b>
-                 <b><p>Jose Coto</p></b>
-                  <b><p>Andres Coto</p></b>
-                  <b><p>Koralia Rodriguez</p></b>
-                  <b><p>Gustavo Solano</p></b>
-                  <b><p>Allan Vazquez</p></b>
+                 <p>CoreVises nace como la propuesta de proyecto #1 del curso Informatica Aplicada a los Negocios de la carrera Informatica Empresarial.</p>
+                 <p>Universidad de Costa Rica</p>
+                 <p>Recinto de Paraiso</p>
+                 <p>Elaborado por:</p>
+                 <p>  Aaron Araya</p>
+                 <p>Jose Coto</p>
+                  <p>Andres Coto</p>
+                  <p>Koralia Rodriguez</p>
+                  <p>Gustavo Solano</p>
+                  <p>Allan Vazquez</p>
               </div>
               <div  class="col-lg-6" >
-                  <img class="img-thumbnail" src="img/ucr.png" alt="thumb01" width="300" height="300"/>
+                  <img class="img" src="img/wallpaper4.gif" alt="thumb01"/>
                   
               </div>
              

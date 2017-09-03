@@ -23,12 +23,6 @@ namespace AppNode2017
             GridView2.DataSource = ProductBusiness.getProducts().ToList();
             GridView2.DataBind();
 
-            DropDownList1.Items.Add("Tecnologia");
-            DropDownList1.Items.Add("Linea Blanca");
-            DropDownList1.Items.Add("Ropa");
-            DropDownList1.Items.Add("Libros");
-            DropDownList1.Items.Add("Accesorios");
-            DropDownList1.Items.Add("Muebles");
         }
 
         protected void udpate_Click(object sender, EventArgs e)

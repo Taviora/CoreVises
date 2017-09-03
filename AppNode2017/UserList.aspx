@@ -56,7 +56,7 @@
                                   <li class="dropdown-header">Gestiones</li>
                                   <li role="separator" class="divider"></li>
                                   <li><a href="DeleteUser.aspx">Eliminar</a></li>
-                                  <li><a href="ViewUsers.aspx">Listar</a></li>
+                                  <li><a href="UserList.aspx">Listar</a></li>
                               </ul>
                          </li>
                           <li class="dropdown">
@@ -96,13 +96,14 @@
         <!--Parte listado productos--->
       <br />
 
-    <div class="container center" style="align-content:center">
+    <div class="panel-default"> 
+    <div class="container center">
         <div class="row">
-
-            <form role="form " runat="server" align="center">
-                <asp:GridView ID="GridView2" runat="server" Width="1000px" aling="center"
+            <div class="panel-body"> 
+            <form role="form " runat="server" >
+                <asp:GridView ID="GridView2" runat="server" Width="1000px" HorizontalAlign="center"
                     AutoGenerateColumns="false" PageSize="5" AllowPaging="false" CssClass="table table-bordered bs-table">
-                    <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="OrangeRed" />
                     <EditRowStyle BackColor="#ffffcc" />
                     <EmptyDataRowStyle ForeColor="Red" CssClass="table table-bordered" />
 
@@ -116,9 +117,15 @@
 
                     </Columns>
                 </asp:GridView>
-            </form>
-        </div>
+                                                
+                              
+                    <asp:Button ID="btdoPDF" runat="server" Text="Generar reporte PDF" CssClass="btn btn-warning" OnClick="udpate_Click" />
 
+                 
+            </form>
+            </div>
+        </div>
+        </div>
     </div>
          
 

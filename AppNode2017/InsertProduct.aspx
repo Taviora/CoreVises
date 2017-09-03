@@ -55,7 +55,7 @@
                                   <li class="dropdown-header">Gestiones</li>
                                   <li role="separator" class="divider"></li>
                                   <li><a href="DeleteUser.aspx">Eliminar</a></li>
-                                  <li><a href="ViewUsers.aspx">Listar</a></li>
+                                  <li><a href="UserList.aspx">Listar</a></li>
                               </ul>
                          </li>
                           <li class="dropdown">
@@ -64,7 +64,7 @@
                                   <li class="dropdown-header">Gestiones</li>
                                   <li role="separator" class="divider"></li>
                                   <li><a href="InsertProduct.aspx">Ingresar</a></li>
-                                  <li><a href="DeletePproduct.aspx">Eliminar</a></li>
+                                  <li><a href="DeleteProduct.aspx">Eliminar</a></li>
                                   <li><a href="UpdateProduct.aspx">Actualizar</a></li>
                                   <li><a href="ProductList.aspx">Listar</a></li>
                               </ul>
