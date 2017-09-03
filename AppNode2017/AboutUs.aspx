@@ -45,14 +45,14 @@
                  </div>
                   <div class="navbar-collapse collapse">
                      <ul class="nav navbar-nav navbar-right">
-                         <li ><a href="Usuarios">Home</a></li>
+                         <li ><a href="StartPage.aspx">Home</a></li>
                          <li class="dropdown">
                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuarios<b class="caret"></b></a>
                               <ul class="dropdown-menu">
                                   <li class="dropdown-header">Gestiones</li>
                                   <li role="separator" class="divider"></li>
                                   <li><a href="DeleteUser.aspx">Eliminar</a></li>
-                                  <li><a href="UserList.aspx">Listar</a></li>
+                                  
                               </ul>
                          </li>
                           <li class="dropdown">
@@ -63,7 +63,7 @@
                                   <li><a href="InsertProduct.aspx">Ingresar</a></li>
                                   <li><a href="DeletePproduct.aspx">Eliminar</a></li>
                                   <li><a href="UpdateProduct.aspx">Actualizar</a></li>
-                                  <li><a href="ProductList.aspx">Listar</a></li>
+                                  
                               </ul>
                          </li>
                           <li class="dropdown">
@@ -71,8 +71,8 @@
                               <ul class="dropdown-menu">
                                   <li class="dropdown-header">Generar por:</li>
                                   <li role="separator" class="divider"></li>
-                                  <li><a href="#">Producto</a></li>
-                                  <li><a href="#">Clientes</a></li>
+                                  <li><a href="ProductList.aspx">Producto</a></li>
+                                  <li><a href="UserList.aspx">Clientes</a></li>
                               </ul>
                          </li> 
                           <li class="active"><a href="Login.aspx">Salir</a></li>                     
@@ -93,17 +93,21 @@
       <div class="container center">
           <div class="row">
               <div class="col-lg-6">
-                  
-                 <p>CoreVises nace como la propuesta de proyecto #1 del curso Informatica Aplicada a los Negocios de la carrera Informatica Empresarial.</p>
-                 <p>Universidad de Costa Rica</p>
-                 <p>Recinto de Paraiso</p>
-                 <p>Elaborado por:</p>
-                 <p>  Aaron Araya</p>
-                 <p>Jose Coto</p>
-                  <p>Andres Coto</p>
-                  <p>Koralia Rodriguez</p>
-                  <p>Gustavo Solano</p>
-                  <p>Allan Vazquez</p>
+                   <div class="panel-heading">
+                            <h3 class="panel-title">
+                               Informacion
+                            </h3>
+                        </div>
+                 <p><b>CoreVises nace como la propuesta de proyecto #1 del curso Informatica Aplicada a los Negocios de la carrera Informatica Empresarial.</b></p>
+                 <p><b>Universidad de Costa Rica</b></p>
+                 <p><b>Recinto de Paraiso</b></p>
+                 <p><b>Elaborado por:</b></p>
+                 <p><b>  Aaron Araya</b></p>
+                 <p><b>Jose Coto</b></p>
+                  <p><b>Andres Coto</b></p>
+                  <p><b>Gustavo Solano</b></p>
+                  <p><b>Koralia Rodriguez</b></p>
+                  <p><b>Allan Vazquez</b></p>
               </div>
               <div  class="col-lg-6" >
                   <img class="img" src="img/wallpaper4.gif" alt="thumb01"/>

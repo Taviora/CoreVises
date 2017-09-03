@@ -16,12 +16,16 @@ namespace AppNode2017
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
             DropDownList1.Items.Add("Tecnologia");
             DropDownList1.Items.Add("Linea Blanca");
             DropDownList1.Items.Add("Ropa");
             DropDownList1.Items.Add("Libros");
             DropDownList1.Items.Add("Accesorios");
             DropDownList1.Items.Add("Muebles");
+            }
+           
         }
 
         protected void btIngresar_Click(object sender, EventArgs e)
