@@ -36,6 +36,7 @@ namespace AppNode2017
             product.inStock = Int32.Parse(TextBox5.Text);
             product.weight = TextBox6.Text;
             product.urlImage = TextBox7.Text;
+            product.price = float.Parse(TextBox8.Text);
 
             ProductBusiness.Edit(product, TextBox1.Text);
 
@@ -46,6 +47,7 @@ namespace AppNode2017
             this.TextBox5.Text = "";
             this.TextBox6.Text = "";
             this.TextBox7.Text = "";
+            this.TextBox8.Text = "";
 
             //cuando se presione sobre el boton
             //se llenara el Gridview con los datos
@@ -70,6 +72,8 @@ namespace AppNode2017
                     ProductBusiness.SearchByID(ObjectId.Parse(TextBox1.Text))["weight"].ToString() : string.Empty;
                 TextBox7.Text = ProductBusiness.SearchByID(ObjectId.Parse(TextBox1.Text))["urlImage"] != null ?
                     ProductBusiness.SearchByID(ObjectId.Parse(TextBox1.Text))["urlImage"].ToString() : string.Empty;
+                TextBox8.Text = ProductBusiness.SearchByID(ObjectId.Parse(TextBox1.Text))["price"] != null ?
+                   ProductBusiness.SearchByID(ObjectId.Parse(TextBox1.Text))["price"].ToString() : string.Empty;
 
             }
         }

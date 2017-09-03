@@ -37,7 +37,7 @@ namespace AppNode2017
             product.description = TextBox2.Text;
             product.code = Int32.Parse(TextBox3.Text);
             product.category = DropDownList1.Text;
-            product.price = Int32.Parse(TextBox4.Text);
+            product.price = float.Parse(TextBox4.Text);
             product.inStock = Int32.Parse(TextBox5.Text);
             product.urlImage = TextBox6.Text;
             product.weight = TextBox7.Text;

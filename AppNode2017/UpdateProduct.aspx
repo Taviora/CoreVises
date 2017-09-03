@@ -131,6 +131,10 @@
                               <asp:TextBox ID="TextBox5" CssClass="form-control" runat="server"></asp:TextBox>
                           </div>
                            <div class="form-group">
+                              <label>Precio</label>
+                              <asp:TextBox ID="TextBox8" CssClass="form-control" runat="server"></asp:TextBox>
+                          </div>
+                           <div class="form-group">
                               <label>Peso</label>
                               <asp:TextBox ID="TextBox6" CssClass="form-control" runat="server"></asp:TextBox>
                           </div>
