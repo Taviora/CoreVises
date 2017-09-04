@@ -27,7 +27,7 @@ namespace AppNode2017
 
             //cuando se presione sobre el boton
             //se llenara el Gridview con los datos
-            GridView2.DataSource = UserBusiness.getUsers().ToList();
+            GridView2.DataSource = ProductBusiness.getProducts().ToList();
             GridView2.DataBind();
 
             this.TextBox1.Text = "";

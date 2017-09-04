@@ -161,6 +161,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="WebServiceProduct.asmx" />
     <None Include="scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="ProductList.aspx" />
     <Content Include="ProductWebService.svc" />
@@ -184,6 +185,7 @@
     <Content Include="UpdateProduct.aspx" />
     <Content Include="UserCrudWebService.svc" />
     <Content Include="UserList.aspx" />
+    <Content Include="UserWebService.asmx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -258,6 +260,14 @@
     </Compile>
     <Compile Include="UserList.aspx.designer.cs">
       <DependentUpon>UserList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserWebService.asmx.cs">
+      <DependentUpon>UserWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServiceProduct.asmx.cs">
+      <DependentUpon>WebServiceProduct.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup />

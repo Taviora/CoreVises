@@ -40,9 +40,11 @@ namespace Data
             //se crea el documento ha insertar
             BsonDocument doc = product.ToBsonDocument();
 
-            //se inserta el documento en la coleccion
-            collection.InsertOne(doc);
-
+            //se valida que un producto no sea ingresado si ya ese codigo existe
+            if (validateCode(product.code)==true) {
+                //se inserta el documento en la coleccion
+                collection.InsertOne(doc);
+            }
             //se retorna el product
             return product;
         }//insertProduct
@@ -164,6 +166,7 @@ namespace Data
                 if (getProduct.category.Equals(category))
                 {
                     list.Add(getProduct);
+                    return list;
                 }
             }
 
@@ -209,5 +212,36 @@ namespace Data
 
             return result;
         }//retorna un objeto BSONdocument con el producto
+
+        //metodo encargado de validar que no se puedan registrar dos productos con el mismo 
+        //codigo
+        public static Boolean validateCode(int code) {
+            MongoClient mongoClient = new MongoClient("mongodb://gustavosj:gustavosj@ds149373.mlab.com:49373/aplicada2017");
+
+            //Se obtiene el servidor
+            MongoServer mongoServer = mongoClient.GetServer();
+
+            //Se busca y obtenemos la BD que se pasa por parametro
+            MongoDatabase dataBase = mongoServer.GetDatabase("aplicada2017");
+
+            //Se obtiene la coleccion en la que vamos a almacenar el objeto
+            MongoCollection productsCollection = dataBase.GetCollection<Product>("products");
+
+            //se crea una lista que almacera todos los productos
+            //para, posteriormente, mostrarlos en interfaz
+            List<Product> list = new List<Product>();
+
+            //foreach que recorre todos los productos, obtiene los codigos de todos
+            //y compara con el nuevo codigo. Si hay otro igual, retorna false, o sea,
+            //no se puede ingresar.
+            //Si retorna true, si puede ser ingresado
+            foreach (Product getProduct in productsCollection.FindAllAs<Product>())
+            {
+                if (getProduct.code==code) {
+                    return false;
+                }
+            }
+            return true;
+        }//validateCode
     }
 }

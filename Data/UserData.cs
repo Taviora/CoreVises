@@ -66,7 +66,7 @@ namespace Data
             //se crea el documento ha insertar
             BsonDocument doc = user.ToBsonDocument();
 
-            //se valida que no se ingresen dos usuarios con el mismo email
+            //se valida que no se ingresen dos usuarios con el mismo email o cedula
             if (valEmail(user.email, user.identificationCard)==false) {
                 //se inserta el documento en la coleccion
                 collection.InsertOne(doc);
@@ -166,6 +166,7 @@ namespace Data
             return result;
         }
 
+        //metodo encargado de 
         public static Boolean valEmail(string email, string identificationCard)
         {
             //ruta del servidor y puerto
@@ -224,5 +225,13 @@ namespace Data
             return list;
         }//getUsers
 
+        //metodo encargado de encriptar las contraseñas para poder almacenarlas
+        //asi en la BD
+        public static string EncryptPass(string encryptString) {
+            string newPass = string.Empty;
+            byte[] encrypted = System.Text.Encoding.Unicode.GetBytes(encryptString);
+            newPass = Convert.ToBase64String(encrypted);
+            return newPass;
+        }//EncryptPass
     }
 }
