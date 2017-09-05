@@ -32,7 +32,7 @@ namespace AppNode2017
                 Label3.Text = "";
             }
             else {
-                Label3.Text="Login Fallido";
+                Label3.Text="Contraseña o email incorrectos";
             }
         }
     }

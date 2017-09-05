@@ -88,12 +88,12 @@
                                  
                                 </div>
                                 <div class="form-group">
-                                       <asp:Button ID="btIngresar" runat="server" Text="Ingresar" CssClass="btn btn-warning" OnClick="btIngresar_Click"/>
+                                       <asp:Button ID="btIngresar" runat="server" Text="Ingresar" CssClass="btn btn-warning" OnClick="btIngresar_Click" Height="36px"/>
                                  
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-6">
-                                    <b><asp:Label ID="Label3" runat="server" CssClass="col-md-6 control-label text-danger" Text=""></asp:Label></b>
+                                    <b><asp:Label ID="Label3" runat="server" CssClass="col-md-6 control-label text-danger" Width="500" Text=""></asp:Label></b>
                                     </div>
                                 </div>
                             </form>

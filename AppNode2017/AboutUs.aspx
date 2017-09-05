@@ -45,37 +45,8 @@
                  </div>
                   <div class="navbar-collapse collapse">
                      <ul class="nav navbar-nav navbar-right">
-                         <li ><a href="StartPage.aspx">Home</a></li>
-                         <li class="dropdown">
-                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuarios<b class="caret"></b></a>
-                              <ul class="dropdown-menu">
-                                  <li class="dropdown-header">Gestiones</li>
-                                  <li role="separator" class="divider"></li>
-                                  <li><a href="DeleteUser.aspx">Eliminar</a></li>
-                                  
-                              </ul>
-                         </li>
-                          <li class="dropdown">
-                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Productos<b class="caret"></b></a>
-                              <ul id="1" class="dropdown-menu">
-                                  <li class="dropdown-header">Gestiones</li>
-                                  <li role="separator" class="divider"></li>
-                                  <li><a href="InsertProduct.aspx">Ingresar</a></li>
-                                  <li><a href="DeletePproduct.aspx">Eliminar</a></li>
-                                  <li><a href="UpdateProduct.aspx">Actualizar</a></li>
-                                  
-                              </ul>
-                         </li>
-                          <li class="dropdown">
-                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reportes<b class="caret"></b></a>
-                              <ul class="dropdown-menu">
-                                  <li class="dropdown-header">Generar por:</li>
-                                  <li role="separator" class="divider"></li>
-                                  <li><a href="ProductList.aspx">Producto</a></li>
-                                  <li><a href="UserList.aspx">Clientes</a></li>
-                              </ul>
-                         </li> 
-                          <li class="active"><a href="Login.aspx">Salir</a></li>                     
+                         <li ><a href="Login.aspx">Login</a></li>
+                                       
                      </ul>
                  </div>
              </div>

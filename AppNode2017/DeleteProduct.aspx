@@ -116,10 +116,7 @@
                           <div class="form-group">
                               <asp:Button ID="btborrar" runat="server" Text="Borrar" CssClass="btn btn-warning" OnClick="btborrar_Click" />
                               <br />
-                              <br />
-                              <br />
-                              <asp:Button ID="Button2" runat="server" Text="Ver listado productos" CssClass="btn btn-warning" OnClick="Button1_Click" />
-
+                            
                           </div>
                       </div>
 

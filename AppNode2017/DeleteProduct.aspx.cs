@@ -15,7 +15,10 @@ namespace AppNode2017
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //cuando se presione sobre el boton
+            //se llenara el Gridview con los datos
+            GridView2.DataSource = ProductBusiness.getProducts().ToList();
+            GridView2.DataBind();
         }
 
         protected void btborrar_Click(object sender, EventArgs e)
